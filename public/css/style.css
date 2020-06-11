@@ -1,0 +1,32 @@
+/* COMMON ----------------------------------------------------------------------------- */
+.content {
+    border: 1px solid #cdcbe3;
+}
+/* HEADER ----------------------------------------------------------------------------- */
+header {
+    background-color: #0f2568;
+}
+.nav-link{
+    color: rgba(255,255,255,.8) !important;
+}
+.nav-link:hover {
+    color: rgba(255,255,255) !important;
+}
+.hn {
+    margin-top: 10px !important;
+}
+/* CONTENT ----------------------------------------------------------------------------- */
+
+
+/* FOOTER ----------------------------------------------------------------------------- */
+.footer {
+    height: 5rem;
+    background-color: #343760;
+    border-radius: 0 0 15px 15px;
+    color: white;
+}
+.footer-text {
+    text-align: right;
+    padding: 25px 30px;
+    font-size: 1.1rem;
+}
