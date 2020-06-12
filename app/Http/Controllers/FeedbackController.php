@@ -4,8 +4,10 @@ use App\Http\Controllers\Controller;
 
 class FeedbackController extends Controller
 {
-    public function fdForm()
+    public function show()
     {
-        return view('fdform');
+        return view('feedback.show');
     }
+
+
 }

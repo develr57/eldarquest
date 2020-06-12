@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('main');
 });
 
+Route::get('/feedback/show', 'FeedbackController@show');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
