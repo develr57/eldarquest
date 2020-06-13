@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Http\Requests\FeedbackRequest;
+use App\Http\Models\Feedback;
 
 class FeedbackController extends Controller
 {
@@ -22,7 +22,13 @@ class FeedbackController extends Controller
                 'phone'     => htmlentities($request->input('phone'), ENT_QUOTES),
                 'comment'   => htmlentities($request->input('comment'), ENT_QUOTES),
             ];
-            debug($data);
+            //debug($data);
+            $feedback = new Feedback;
+            $feedback->addFeedback($data);
+            if ($feedback)
+            {
+                return view('feedback.accepted');
+            }
         }
     }
 }
