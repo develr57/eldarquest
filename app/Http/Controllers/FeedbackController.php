@@ -16,8 +16,13 @@ class FeedbackController extends Controller
         //debug($_POST);
         if ($request->isMethod('post'))
         {
-            echo "OK";
-            debug($_POST);
+            $data = [
+                'name'      => htmlentities($request->input('name'), ENT_QUOTES),
+                'email'     => htmlentities($request->input('email'), ENT_QUOTES),
+                'phone'     => htmlentities($request->input('phone'), ENT_QUOTES),
+                'comment'   => htmlentities($request->input('comment'), ENT_QUOTES),
+            ];
+            debug($data);
         }
     }
 }
