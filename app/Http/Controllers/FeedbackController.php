@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\FeedbackRequest;
 
 class FeedbackController extends Controller
 {
@@ -10,17 +11,13 @@ class FeedbackController extends Controller
         return view('feedback.show');
     }
 
-    public function store(Request $request)
+    public function store(FeedbackRequest $request)
     {
         //debug($_POST);
-        $request->validate([
-            'name'      => 'required',
-            'email'     => 'required|email',
-            'phone'     => 'required',
-            'comment'   => 'required',
-        ],[
-            '*.required'    => 'Это поле не должно быть пустым!',
-            //'email.email'   => 'Это поле не соответствует формату эл.почты!',
-        ]);
+        if ($request->isMethod('post'))
+        {
+            echo "OK";
+            debug($_POST);
+        }
     }
 }

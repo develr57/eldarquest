@@ -11,7 +11,7 @@
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label">Как к вам обращаться?* </label>
                     <div class="col-md-8">
-                        <input class="form-control" type="text" name="name">
+                        <input class="form-control" type="text" name="name" value="{{old('name')}}">
                         @error('name')
                             <label class="col-form-label error__color">{{$message}}</label>
                         @enderror
@@ -20,7 +20,7 @@
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label">E-mail*: </label>
                     <div class="col-md-8">
-                        <input class="form-control" type="email" name="email">
+                        <input class="form-control" type="email" name="email" value="{{old('email')}}">
                         @error('email')
                             <label class="col-form-label error__color">{{$message}}</label>
                         @enderror
@@ -29,7 +29,7 @@
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label">Телефон*: </label>
                     <div class="col-md-8">
-                        <input class="form-control" type="text" name="phone">
+                        <input class="form-control" type="text" name="phone" value="{{old('phone')}}">
                         @error('phone')
                             <label class="col-form-label error__color">{{$message}}</label>
                         @enderror
@@ -38,7 +38,7 @@
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label">Комментарий*: </label>
                     <div class="col-md-8">
-                        <textarea class="form-control" name="comment" form="fdform" rows="8" value="">
+                        <textarea class="form-control" name="comment" form="fdform" rows="8" value="{{old('comment')}}">
                         </textarea>
                         @error('comment')
                             <label class="col-form-label error__color">{{$message}}</label>
