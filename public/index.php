@@ -58,3 +58,9 @@ $response = $kernel->handle(
 $response->send();
 
 $kernel->terminate($request, $response);
+
+// Функция для распечатки
+function debug($var)
+{
+    echo "<pre>".print_r($var)."</pre>";
+}

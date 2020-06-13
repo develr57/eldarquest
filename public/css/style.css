@@ -19,6 +19,9 @@ header {
 .fdform {
     padding-top: 20px;
 }
+.error__color {
+    color: red !important;
+}
 /* FOOTER ----------------------------------------------------------------------------- */
 .footer {
     height: 5rem;

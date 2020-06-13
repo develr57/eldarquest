@@ -5,7 +5,7 @@
                 <a class="nav-link" href="/">Главная</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Контакты</a>
+                <a class="nav-link" href="">Обратная связь</a>
             </li>
         </ul>
     </div>
