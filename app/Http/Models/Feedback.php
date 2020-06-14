@@ -12,13 +12,14 @@ class Feedback extends Model
     {
         extract($data);
 
-        $this->name         = $name;
-        $this->email        = $email;
-        $this->phone        = $phone;
-        $this->comment      = $comment;
-        $this->created_at   = time();
+        $add = new Feedback;
+        $add->name          = $name;
+        $add->email         = $email;
+        $add->phone         = $phone;
+        $add->comment       = $comment;
+        $add->created_at    = time();
         
-        if ($this->create())
+        if ($add->save())
         {
             return true;
         }

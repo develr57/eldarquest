@@ -13,7 +13,6 @@ class FeedbackController extends Controller
 
     public function store(FeedbackRequest $request)
     {
-        //debug($_POST);
         if ($request->isMethod('post'))
         {
             $data = [
@@ -22,13 +21,27 @@ class FeedbackController extends Controller
                 'phone'     => htmlentities($request->input('phone'), ENT_QUOTES),
                 'comment'   => htmlentities($request->input('comment'), ENT_QUOTES),
             ];
-            //debug($data);
+
             $feedback = new Feedback;
-            $feedback->addFeedback($data);
-            if ($feedback)
+            $result = $feedback->addFeedback($data);
+            if ($result)
             {
-                return view('feedback.accepted');
+                return redirect('feedback/accepted');
+            }
+            else
+            {
+                return redirect('feedback/notaccepted');
             }
         }
+    }
+
+    public function accepted()
+    {
+        return view('feedback.accepted');
+    }
+
+    public function notAccepted()
+    {
+        return view('feedback.notaccepted');
     }
 }

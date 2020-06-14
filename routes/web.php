@@ -21,6 +21,10 @@ Route::get('/feedback/show', 'FeedbackController@show');
 
 Route::post('/feedback/store', 'FeedbackController@store');
 
+Route::get('/feedback/accepted', 'FeedbackController@accepted');
+
+Route::get('/feedback/notaccepted', 'FeedbackController@notaccepted');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
