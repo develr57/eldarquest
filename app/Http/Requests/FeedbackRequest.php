@@ -24,10 +24,10 @@ class FeedbackRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'      => 'required',
-            'email'     => 'required|email',
-            'phone'     => 'required',
-            'comment'   => 'required',
+            'name'      => 'required|max:100',
+            'email'     => 'required|email|max:80',
+            'phone'     => 'required|max:20',
+            'comment'   => 'required|max:500',
         ];
     }
 
@@ -36,6 +36,7 @@ class FeedbackRequest extends FormRequest
         return [
             'required'  => 'Это поле не должно быть пустым!',
             'email'     => 'Это поле не соответствует формату эл.почты!',
+            'max'       => 'Не более :max символов для этого поля!'
         ];
     }
 }

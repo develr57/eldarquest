@@ -38,8 +38,7 @@
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label">Комментарий*: </label>
                     <div class="col-md-8">
-                        <textarea class="form-control" name="comment" form="fdform" rows="8" value="{{old('comment')}}">
-                        </textarea>
+                        <textarea class="form-control" name="comment" form="fdform" rows="8">{{old('comment')}}</textarea>
                         @error('comment')
                             <label class="col-form-label error__color">{{$message}}</label>
                         @enderror
