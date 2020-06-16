@@ -10,6 +10,6 @@
         </ul>
     </div>
     <div class="ml-md-auto">
-        <a class="sigh-in" href="/"><button type="button" class="btn btn-success">Войти</button></a>
+        <a class="sigh-in" href="{{route('login')}}"><button type="button" class="btn btn-success">Войти</button></a>
     </div>
 </header>

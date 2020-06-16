@@ -32,3 +32,6 @@ Route::get('/feedback/notaccepted', 'FeedbackController@notaccepted');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
