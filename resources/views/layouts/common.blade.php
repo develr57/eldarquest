@@ -1,3 +1,7 @@
+<?php
+use Illuminate\Support\Facades\Auth;
+$user = Auth::user();
+?>
 <html>
     <head>
         <meta charset="utf-8">
