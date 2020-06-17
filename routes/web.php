@@ -31,7 +31,11 @@ Route::get('/feedback/notaccepted', 'FeedbackController@notaccepted');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
+Route::group(['namespace' => 'admin'], function() {
+    Route::get('/admin', 'HomeController@index')->name('home');
+    Route::get('/admin/showfeedbacks', 'HomeController@showfeedbacks')->name('showfeedbacks');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['namespace' => 'auth'], function() {
+    Route::get('/logout', 'LoginController@logout')->name('logout');
+});
