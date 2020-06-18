@@ -8,7 +8,7 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    <a class="btn btn-info" href="{{route('showfeedbacks')}}">Заявки обратной связи</a>
+                    <a class="btn btn-info" href="{{route('showFeedbacks')}}">Заявки обратной связи</a>
                 </div>
             </div>
         </div>

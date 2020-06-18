@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 18 2020 г., 13:44
+-- Время создания: Июн 18 2020 г., 23:44
 -- Версия сервера: 8.0.19
 -- Версия PHP: 7.4.5
 
@@ -43,7 +43,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'admin', 'mail@mail.ru', NULL, '$2y$10$luIRXr3MlZoUWLa.MzewQOF.LBoDsVciBLGA9Q/Zhr/IhKGTsvPaG', 'XokGohWMb2BDR5KgLsKyiY2rT3w8EXo4suEsP5EBCS6fkKAWHDNnKDkTVDPd', '2020-06-17 09:54:36', '2020-06-17 09:54:36');
+(2, 'admin', 'mail@mail.ru', NULL, '$2y$10$luIRXr3MlZoUWLa.MzewQOF.LBoDsVciBLGA9Q/Zhr/IhKGTsvPaG', 'voH9PDOjkK80TJT2TrI2h6IFUrw9FPsBdki9JmfrJ6jNZoJqIK4jqQib5O1p', '2020-06-17 09:54:36', '2020-06-17 09:54:36');
 
 --
 -- Индексы сохранённых таблиц

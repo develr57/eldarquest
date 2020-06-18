@@ -2,7 +2,8 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FeedbackRequest;
-use App\Http\Models\Feedback;
+use App\Models\Feedback;
+use Illuminate\Support\Carbon;
 
 class FeedbackController extends Controller
 {
@@ -13,26 +14,17 @@ class FeedbackController extends Controller
 
     public function store(FeedbackRequest $request)
     {
-        if ($request->isMethod('post'))
-        {
-            $data = [
-                'name'      => htmlentities($request->input('name'), ENT_QUOTES),
-                'email'     => htmlentities($request->input('email'), ENT_QUOTES),
-                'phone'     => htmlentities($request->input('phone'), ENT_QUOTES),
-                'comment'   => htmlentities($request->input('comment'), ENT_QUOTES),
-            ];
+            $data = $request->only('name', 'email', 'phone', 'comment');
+            Feedback::create($data);
+            return redirect()->route('feedbackAccepted');
+    }
 
-            $feedback = new Feedback;
-            $result = $feedback->addFeedback($data);
-            if ($result)
-            {
-                return redirect('feedback/accepted');
-            }
-            else
-            {
-                return redirect('feedback/notaccepted');
-            }
-        }
+    public function showFeedbacks()
+    {
+        $feedbacks = Feedback::orderBy('created_at', 'desc');
+        $feedbacks = $feedbacks->get();
+        $feedbacks->toArray();
+        return view('feedback.showfeedbacks', compact('feedbacks'));
     }
 
     public function accepted()

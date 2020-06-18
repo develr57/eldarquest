@@ -27,7 +27,7 @@ class FeedbackRequest extends FormRequest
             'name'      => 'required|max:100',
             'email'     => 'required|email|max:80',
             'phone'     => 'required|max:20',
-            'comment'   => 'required|max:500',
+            'comment'   => 'required|max:1200',
         ];
     }
 

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
     <h2 class="hn">Заполните форму</h2>
-    <form action="/feedback/store" method="post" id="fdform" class="fdform">
+    <form action="{{route('storeFeedback')}}" method="post" id="fdform" class="fdform">
         @csrf
         <div class="row">
 
@@ -52,7 +52,6 @@
             </div>
 
             <div class="col-lg-3">
-                <?php echo isset($email) ? $email : ''; ?>
             </div>
 
         </div>

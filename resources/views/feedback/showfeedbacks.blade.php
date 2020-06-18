@@ -12,7 +12,7 @@
                             <table class="table table-striped table-bordered">
                                 <tr>
                                     <th class="col-2" scope="row">Дата: </td>
-                                    <td class="col-10">{{date('Y-m-d  H:i', $feedback['created_at'])}}</td>
+                                    <td class="col-10">{{$feedback['created_at']}}</td>
                                 </tr>
                                 <tr>
                                     <th class="col-2" scope="row">Имя: </td>

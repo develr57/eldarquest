@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Models\Feedback;
+use App\Models\Feedback;
 use Illuminate\Database\Eloquent\Collection;
 
 class HomeController extends Controller
@@ -27,12 +27,5 @@ class HomeController extends Controller
     public function index()
     {
         return view('admin.index');
-    }
-
-    public function showFeedbacks()
-    {
-        $feedbacks = Feedback::all();
-
-        return view('admin.showfeedbacks', compact('feedbacks'));
     }
 }

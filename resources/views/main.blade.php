@@ -23,10 +23,9 @@
          - верь!
     </p>
     <div class="text-center" style="padding-bottom: 20px;">
-        <a href="/feedback/show">
+        <a href="{{route('showFeedbackForm')}}">
             <button type="button" class="btn btn-warning">Заказать обратную связь</button>
         </a>
     </div>
 </div>
 @endsection
-<!-- <?php //echo "<pre>".print_r(get_defined_vars())."</pre>"; ?> -->
