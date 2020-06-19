@@ -26,21 +26,8 @@ Route::post('/feedback/store', 'FeedbackController@store')
 Route::get('/feedback/showfeedbacks', 'FeedbackController@showFeedbacks')
     ->name('showFeedbacks')->middleware('auth');
 
-Route::get('/feedback/accepted', 'FeedbackController@accepted')
-    ->name('feedbackAccepted');
-
-// Route::get('/feedback/notaccepted', 'FeedbackController@notAccepted')->name('feedbackNotAccepted');
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Auth::routes();
 
 Route::group(['namespace' => 'admin'], function() {
     Route::get('/admin', 'HomeController@index')->name('home');
 });
-
-// Route::group(['namespace' => 'auth'], function() {
-//     Route::post('auth/logout', 'LoginController@logout')->name('logout');
-// });
