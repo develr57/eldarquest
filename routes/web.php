@@ -42,5 +42,5 @@ Route::group(['namespace' => 'admin'], function() {
 });
 
 // Route::group(['namespace' => 'auth'], function() {
-//     Route::post('/logout', 'LoginController@logout')->name('logout');
+//     Route::post('auth/logout', 'LoginController@logout')->name('logout');
 // });

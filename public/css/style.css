@@ -22,6 +22,19 @@ header {
 .error__color {
     color: red !important;
 }
+.table-custom {
+    margin-bottom: 0rem;
+}
+.table-custom th, .table-custom td {
+    padding: 0.55rem;
+    word-wrap: anywhere;
+}
+.card-custom table, .card-custom {
+    font-size: 10pt !important;
+}
+.card-custom {
+    border: 1px solid #0f2568;
+}
 /* FOOTER ----------------------------------------------------------------------------- */
 .footer {
     height: 5rem;
