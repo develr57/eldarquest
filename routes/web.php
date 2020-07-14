@@ -23,6 +23,9 @@ Route::get('/feedback/show', 'FeedbackController@show')
 Route::post('/feedback/store', 'FeedbackController@store')
     ->name('storeFeedback');
 
+Route::get('/feedback/accepted', 'FeedbackController@accepted')
+    ->name('feedbackAccepted');
+
 Route::get('/feedback/showfeedbacks', 'FeedbackController@showFeedbacks')
     ->name('showFeedbacks')->middleware('auth');
 
